@@ -1,0 +1,8 @@
+@import "~antd/dist/antd.dark.css";
+@import "./variables.scss";
+
+.screen {
+    background: #141414;
+    padding: $screen-inner-padding;
+    min-height: $screen-min-height;
+}
