@@ -1,4 +1,5 @@
 {
+  "homepage": "http://EokLennon.github.io/pcbs-calculator",
   "name": "pcbs-calculator",
   "version": "0.1.0",
   "description": "PC Building Simulator Calculator for 3DMark Scores, Builds and Upgrades",
@@ -17,9 +18,12 @@
     "react-scripts": "3.4.1"
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "node-sass": "^4.14.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "set PORT=9999 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
