@@ -1,49 +1,49 @@
-import React, { useState } from "react";
-import { Layout, Menu } from "antd";
+import React from 'react';
+import { Layout } from 'antd';
 import {
-  DesktopOutlined,
-  PieChartOutlined,
-  FileOutlined,
-  TeamOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from 'react-router-dom'
+
+import SiderWithRouter from './components/SiderWithRouter';
+import { ROUTES } from './constants';
+
+import ScoresScreen from './screens/ScoresScreen';
+import BuildMakerScreen from './screens/BuildMakerScreen';
+import BuildUpgraderScreen from './screens/BuildUpgraderScreen';
+import PartFixerScreen from './screens/PartFixerScreen';
+import HistoryScreen from './screens/HistoryScreen';
 
 // Main Style
 import './theme/style.scss';
 // -------------
 
-const { Content, Footer, Sider } = Layout;
+const { Content, Footer } = Layout;
 
 const App = () => {
-  const [collapsed, setCollapsed] = useState(false)
   return (
-    <Layout hasSider style={{ minHeight: "100vh" }}>
-      <Sider collapsible collapsed={collapsed} onCollapse={() => setCollapsed(!collapsed)}>
-        <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
-          <Menu.Item key="1" icon={<PieChartOutlined />}>
-            Option 1
-          </Menu.Item>
-          <Menu.Item key="2" icon={<DesktopOutlined />}>
-            Option 2
-          </Menu.Item>
-          <Menu.Item key="3" icon={<UserOutlined />} title="User">
-            Users
-          </Menu.Item>
-          <Menu.Item key="4" icon={<TeamOutlined />} title="Team">
-            Teams
-          </Menu.Item>
-          <Menu.Item key="9" icon={<FileOutlined />}>
-            Files
-          </Menu.Item>
-        </Menu>
-      </Sider>
-      <Layout className="site-layout">
-        <Content style={{ margin: "16px" }}>
-          
-        </Content>
-        <Footer style={{ textAlign: "center" }}>Ant Design ©2018 Created by Ant UED</Footer>
+    <Router>
+      <Layout className="main">
+        <SiderWithRouter />
+        <Layout className="site-layout">
+          <Content className="site-content">
+            <Switch>
+              <Route exact path={ROUTES.SCORES}   component={ScoresScreen} />
+              <Route exact path={ROUTES.MAKER}    component={BuildMakerScreen} />
+              <Route exact path={ROUTES.UPGRADER} component={BuildUpgraderScreen} />
+              <Route exact path={ROUTES.FIXER}    component={PartFixerScreen} />
+              <Route exact path={ROUTES.HISTORY}  component={HistoryScreen} />
+              <Redirect from="/" to={ROUTES.SCORES} />
+            </Switch>
+          </Content>
+          <Footer className="site-footer">
+            &copy;2020 Created by EokLennon
+          </Footer>
+        </Layout>
       </Layout>
-    </Layout>
+    </Router>
   );
 }
 

@@ -1,8 +1,20 @@
-@import "~antd/dist/antd.dark.css";
-@import "./variables.scss";
+@import '~antd/dist/antd.dark.css';
+@import './variables.scss';
 
-.screen {
-    background: #141414;
-    padding: $screen-inner-padding;
+.main {
+    min-height: 100vh;
+}
+
+.site-layout .site-content {
+    margin: $screen-margin;
+}
+
+.site-layout .site-footer {
+    text-align: center;
+}
+
+.site-layout .site-content .screen {
+    background: #1f1f1f;
+    padding: $screen-padding;
     min-height: $screen-min-height;
 }

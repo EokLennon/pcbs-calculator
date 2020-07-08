@@ -2,8 +2,8 @@ import React from "react";
 
 const ScoresScreen = ({ children }) => {
   return (
-    <div className="screen scores-screen">
-      I'm a score :D
+    <div className="screen build-upgrader-screen">
+      I'm a Build Upgrader :D
     </div>
   )
 }
