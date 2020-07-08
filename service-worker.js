@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/pcbs-calculator/precache-manifest.00d282c5d394d82375f77f0ed9a9cd6a.js"
+  "/pcbs-calculator/precache-manifest.789473ca94386e1bbce8d987f19cc9d9.js"
 );
 
 self.addEventListener('message', (event) => {

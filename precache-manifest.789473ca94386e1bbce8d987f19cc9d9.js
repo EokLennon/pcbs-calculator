@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ce97a4b41a4513c2b7b07870bcdf36df",
+    "revision": "00211f6be2c6cfaf00ae092510d82a59",
     "url": "/pcbs-calculator/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pcbs-calculator/static/css/2.c7fd0695.chunk.css"
   },
   {
-    "revision": "349803208a0d07aff7e4",
+    "revision": "7983e3882279c40a48db",
     "url": "/pcbs-calculator/static/css/main.3079094b.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pcbs-calculator/static/js/2.1ecd701b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "349803208a0d07aff7e4",
-    "url": "/pcbs-calculator/static/js/main.a8805d83.chunk.js"
+    "revision": "7983e3882279c40a48db",
+    "url": "/pcbs-calculator/static/js/main.f6aa3838.chunk.js"
   },
   {
     "revision": "b6b447b99eaef6ef6a09",
