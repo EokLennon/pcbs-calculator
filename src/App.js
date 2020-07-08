@@ -28,7 +28,7 @@ const { Content, Footer } = Layout;
 // #endregion 
 
 const App = () => (
-  <Router basename="/pcbs-calculator">
+  <Router basename={process.env.PUBLIC_URL}>
     <Layout className="main">
       <SiderWithRouter />
       <Layout className="site-layout">
